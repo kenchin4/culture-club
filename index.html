@@ -247,6 +247,13 @@
   .tuner{margin-top:18px;border:1px solid var(--edge);border-radius:6px;background:#0F1012;padding:12px 12px 10px}
   .tuner-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:10px;font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--label)}
   .tuner-head .jp{font-family:var(--sans);font-size:12.5px;letter-spacing:.04em;color:var(--ink-dim)}
+  .tuner-frame{
+    position:relative;width:100%;height:460px;margin-bottom:10px;
+    border:1px solid var(--edge);border-radius:4px;overflow:hidden;background:#141519;
+    box-shadow:inset 0 2px 10px rgba(0,0,0,.6);
+  }
+  .tuner-frame iframe{display:block;width:100%;height:100%;border:0}
+  @media(max-width:560px){.tuner-frame{height:380px}}
   .tuner-open{
     display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink);
     padding:12px 14px;border-radius:4px;border:1px solid var(--edge);background:#141519;
@@ -444,14 +451,17 @@
 
     <div class="tuner">
       <div class="tuner-head"><span>FM++ PLAYER</span><span class="jp">放送中はワンタップで再生</span></div>
+      <div class="tuner-frame">
+        <iframe src="https://fmplapla.com/yesfm" title="FM++ プレイヤー（YES-fm）" loading="lazy" allow="autoplay; encrypted-media" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
       <a class="tuner-open" href="https://fmplapla.com/yesfm" target="_blank" rel="noopener">
         <span class="tuner-open-ico" aria-hidden="true">▶</span>
         <span class="tuner-open-txt">
-          <strong>FM++ で YES-fm を聴く</strong>
+          <strong>プレイヤーが表示されないときはこちら</strong>
           <small>fmplapla.com/yesfm を新しいタブで開きます</small>
         </span>
       </a>
-      <p class="tuner-note">スマートフォンは FM++ アプリ（iOS / Android）でも同じ放送が聴けます。エリア外・遠方の方もこちらからどうぞ。</p>
+      <p class="tuner-note">上のプレイヤーは FM++ （fmplapla.com）の画面をそのまま表示しています。スマートフォンは FM++ アプリ（iOS / Android）でも同じ放送が聴けます。エリア外・遠方の方もこちらからどうぞ。</p>
     </div>
   </section>
 
